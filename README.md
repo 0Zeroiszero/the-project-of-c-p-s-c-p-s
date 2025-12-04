@@ -176,7 +176,7 @@ kalau `true`, `print nama dan deadline-nya`
 #### Algoritma
 Fitur sederhana:
 1. Cek semua tugas dan hitung sisa hari ke deadline
-2. Tampilkan warning di terminal untuk tugas urgent (≤ 3 hari) dan sudah lewat harinya
+2. Tampilkan warning di terminal untuk tugas urgent (≤ 5 hari) dan sudah lewat harinya
 
 ```c
 // notification.h
@@ -205,7 +205,8 @@ if (sisa_hari < 0 && strcmp(task->status, "belum selesai") == 0)
 kalau `true`, berarti sudah lewat
 4. cek
 ```c
-else if (sisa_hari <= 3 && sisa_hari >= 0)
+else if (sisa_hari <= 5 && sisa_hari >= 0)
 ```
 `printf("n hari lagi")`
+
 5. notifikasi untuk deadline yang <= 5 hari
