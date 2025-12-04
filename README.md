@@ -1,6 +1,6 @@
 # Dokumentasi Fungsi CRUD
 ## Cara implementasi kode untuk membuat:
-
+[lihat format.txt](http://github.com/0Zeroiszero/the-project-of-c-p-s-c-p-s/blob/main/debug/format.txt "lihat format.txt")
 1. Membuat algoritma pengurutan
 2. Membuat algoritma menyimpan file (saving)
 3. Membuat algoritma deadline
