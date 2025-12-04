@@ -58,6 +58,14 @@ parameter filename adalah Nama file yang akan dicek. Return 1 jika file ada, 0 j
  */
 int cek_file_ada(const char* filename);
 ```
+- `waktu_utils.h`
+
+```c
+/*
+Mendapatkan waktu saat ini dalam format unix timestamp dengan return time_t
+*/
+time_t waktu_sekarang();
+```
 
 ### Algoritma Pengurutan
 #### Algoritma
@@ -79,7 +87,7 @@ void sortir_by_deadline(daftar_tugas* tasks, int count);
     Presentasi Kelompok | Slide presentasi proyek akhir | 05-12-2024 | status: selesai | 1733356800 | 20-11-2024 | ,
     Riset Pasar | Analisis kompetitor produk digital | 20-12-2024 | status: belum selesai | 1734652800 | 30-11-2024 | ,
 ```
-2. Hasil yang diinginkan `berdasarkan deadline`
+2. Hasil yang diinginkan `berdasarkan deadline (ascending)`
 ```
     Presentasi Kelompok | Slide presentasi proyek akhir | 05-12-2024 | status: selesai | 1733356800 | 20-11-2024 | ,
     Laporan Keuangan | Catatan pengeluaran bulan November | 08-12-2024 | status: belum selesai | 1733616000 | 02-12-2024 | ,
@@ -90,4 +98,4 @@ void sortir_by_deadline(daftar_tugas* tasks, int count);
 #### Catatan
 Download file `crud_utils.c` dan `crud_utils.h` kemudian berikan kepada AI.
 
-deadline diurutkan dengan memanfaatkan `tanggal_deadline_unix` yang terdapat pada struct
+deadline diurutkan dengan memanfaatkan `tanggal_deadline_unix` yang terdapat pada struct dan gunakan fungsi `time_t waktu_sekarang();` untuk melihat mana yang terdekat dari hari ini
