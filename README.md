@@ -58,6 +58,7 @@ int cek_file_ada(const char* filename);
 ```
 
 ### Algoritma Pengurutan
+#### Algoritma
 Dua algoritma pengurutan: 
 1. nama (A-Z)
 2. deadline (Deadline terdekat dari hari ini)
@@ -66,6 +67,7 @@ Dua algoritma pengurutan:
 void sortir_by_name(daftar_tugas* tasks, int count);
 void sortir_by_deadline(daftar_tugas* tasks, int count);
 ```
+#### Hasil
 1. Hasil yang diinginkan
 `Pengurutan berdasarkan nama (A-Z)`
 ```
@@ -75,3 +77,14 @@ void sortir_by_deadline(daftar_tugas* tasks, int count);
     Presentasi Kelompok | Slide presentasi proyek akhir | 05-12-2024 | status: selesai | 1733356800 | 20-11-2024 | ,
     Riset Pasar | Analisis kompetitor produk digital | 20-12-2024 | status: belum selesai | 1734652800 | 30-11-2024 | ,
 ```
+2. Hasil yang diinginkan `berdasarkan deadline`
+
+
+    Presentasi Kelompok | Slide presentasi proyek akhir | 05-12-2024 | status: selesai | 1733356800 | 20-11-2024 | ,
+    Laporan Keuangan | Catatan pengeluaran bulan November | 08-12-2024 | status: belum selesai | 1733616000 | 02-12-2024 | ,
+    Desain Poster | Buat poster acara seminar teknologi | 10-12-2024 | status: selesai | 1733788800 | 25-11-2024 | ,
+    Belajar Python | Mengerjakan latihan fungsi dan modul | 15-12-2024 | status: belum selesai | 1734220800 | 01-12-2024 | ,
+    Riset Pasar | Analisis kompetitor produk digital | 20-12-2024 | status: belum selesai | 1734652800 | 30-11-2024 | ,
+
+#### Catatan
+deadline diurutkan dengan memanfaatkan `tanggal_deadline_unix` yang terdapat pada struct
