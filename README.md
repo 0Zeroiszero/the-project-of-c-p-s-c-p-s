@@ -126,10 +126,12 @@ Riset Pasar | Analisis kompetitor produk digital | 20/12/2024 | belum_selesai | 
 Gagal menyimpan ke file! Periksa file
 ```
 
+> Jika ingin menambahkan hapus file dapat menggunakan fungsi `remove()`
+
 #### Catatan
 1. Download `files_utils.c` dan `files_utils.h` → berikan ke AI
 2. Fungsi paling penting: `fopen(filename, "w")` pada `stdio.h` untuk buat file baru
 3. Loop semua task, tulis pakai `fprintf(file, "%s|%s|%s|%s|%ld|%ld|%ld,\n", ...)`
-4. Jangan lupa fclose(file) di akhir
+4. Jangan lupa `fclose(file)` di akhir
 5. Kalau `fopen return NULL` → berarti gagal
-6. Format tanggal: dd/mm/yyyy, contoh 12/12/2025 atau 29/02/2024, cek validitas tanggal (kabisat atau tidak).
+6. Format tanggal: dd/mm/yyyy, contoh **12/12/2025** atau **29/02/2024**, cek validitas tanggal (kabisat atau tidak).
