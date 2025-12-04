@@ -135,3 +135,37 @@ Gagal menyimpan ke file! Periksa file
 4. Jangan lupa `fclose(file)` di akhir
 5. Kalau `fopen return NULL` → berarti gagal
 6. Format tanggal: dd/mm/yyyy, contoh **12/12/2025** atau **29/02/2024**, cek validitas tanggal (kabisat atau tidak).
+
+### Algoritma Deadline
+#### Algoritma
+Cukup 2 fungsi:
+1. Hitung hari sampai deadline
+2. Tampilkan tugas yang melewati deadline (cukup filter)
+
+```c
+// deadline.h
+int hitung_sisa_hari(time_t deadline_unix);
+void tampilkan_tugas_lewat_deadline(daftar_tugas* tasks, int count);
+```
+
+#### Hasil
+1. Hasil yang diinginkan `perhitungan hari`:
+```
+Sisa waktu: 14 hari lagi
+```
+2. Hasil yang diinginkan `daftar tugas lewat deadline`:
+```
+=== LIST TUGAS LEWAT DEADLINE ===
+Debug Kode - Seharusnya: 01/12/2024
+Laporan Keuangan - Seharusnya: 08/12/2024
+```
+
+#### Catatan
+1. Download `waktu_utils.c` dan `waktu_utils.h` → berikan ke AI
+2. hitung_sisa_hari: `return (deadline_unix - waktu_sekarang()) / 86400;`
+3. tampilkan_tugas_lewat_deadline: loop semua task, cek
+```c
+if (task->tanggal_deadline_unix < waktu_sekarang() && strcmp(task->status, "belum_selesai") == 0)
+```
+kalau `true`, `print nama dan deadline-nya`
+4. fokus ke hari
