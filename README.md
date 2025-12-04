@@ -58,9 +58,12 @@ int cek_file_ada(const char* filename);
 ```
 
 ### Algoritma Pengurutan
+Dua algoritma pengurutan: 
+- nama 
+- deadline
 ```c
 // sorting.h
-void sortir_by_nama(daftar_tugas* tasks, int count);
+void sortir_by_name(daftar_tugas* tasks, int count);
 void sortir_by_deadline(daftar_tugas* tasks, int count);
 ```
 Hasil yang diinginkan
