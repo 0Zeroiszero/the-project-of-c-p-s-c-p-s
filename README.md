@@ -111,3 +111,25 @@ Fitur:
 // saving.h
 int simpan_ke_file(const char* filename, daftar_tugas* tasks, int count);
 ```
+
+#### Hasil
+1. Hasil yang diinginkan `file setelah disimpan`:
+```
+Belajar Python | Mengerjakan latihan fungsi dan modul | 15/12/2024 | belum_selesai | 1734220800 | 1734842925 | 1734842925,
+Desain Poster | Buat poster acara seminar teknologi | 10/12/2024 | selesai | 1733788800 | 1734843000 | 1734843000,
+Laporan Keuangan | Catatan pengeluaran bulan November | 08/12/2024 | belum_selesai | 1733616000 | 1734842800 | 1734842800,
+Presentasi Kelompok | Slide presentasi proyek akhir | 05/12/2024 | selesai | 1733356800 | 1734843100 | 1734843100,
+Riset Pasar | Analisis kompetitor produk digital | 20/12/2024 | belum_selesai | 1734652800 | 1734843200 | 1734843200,
+```
+2. Hasil yang diinginkan jika `file gagal disimpan`:
+```
+Gagal menyimpan ke file! Periksa file
+```
+
+#### Catatan
+1. Download `files_utils.c` dan `files_utils.h` → berikan ke AI
+2. Fungsi paling penting: `fopen(filename, "w")` pada `stdio.h` untuk buat file baru
+3. Loop semua task, tulis pakai `fprintf(file, "%s|%s|%s|%s|%ld|%ld|%ld,\n", ...)`
+4. Jangan lupa fclose(file) di akhir
+5. Kalau `fopen return NULL` → berarti gagal
+6. Format tanggal: dd/mm/yyyy, contoh 12/12/2025 atau 29/02/2024, cek validitas tanggal (kabisat atau tidak).
