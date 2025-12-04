@@ -99,3 +99,15 @@ void sortir_by_deadline(daftar_tugas* tasks, int count);
 Download file `crud_utils.c` dan `crud_utils.h` kemudian berikan kepada AI.
 
 deadline diurutkan dengan memanfaatkan `tanggal_deadline_unix` yang terdapat pada struct dan gunakan fungsi `time_t waktu_sekarang();` untuk melihat mana yang terdekat dari hari ini
+
+### Algoritma Menyimpan File (Saving)
+#### Algoritma
+Fitur:
+1. Menyimpan array daftar_tugas ke file `.txt` dengan format persis `format.txt`
+2. Menimpa file lama langsung
+3. Cek apakah penulisan berhasil
+
+```c
+// saving.h
+int simpan_ke_file(const char* filename, daftar_tugas* tasks, int count);
+```
