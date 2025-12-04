@@ -88,4 +88,6 @@ void sortir_by_deadline(daftar_tugas* tasks, int count);
     Riset Pasar | Analisis kompetitor produk digital | 20-12-2024 | status: belum selesai | 1734652800 | 30-11-2024 | ,
 ```
 #### Catatan
+Download file `crud_utils.c` dan `crud_utils.h` kemudian berikan kepada AI.
+
 deadline diurutkan dengan memanfaatkan `tanggal_deadline_unix` yang terdapat pada struct
