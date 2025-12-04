@@ -161,7 +161,7 @@ Laporan Keuangan - Seharusnya: 08/12/2024
 ```
 
 #### Catatan
-1. Download `waktu_utils.c` dan `waktu_utils.h` → berikan ke AI
+1. Download `waktu_utils.c` dan `waktu_utils.h` → kasih ke AI
 2. hitung_sisa_hari: `return (deadline_unix - waktu_sekarang()) / 86400;`
 3. tampilkan_tugas_lewat_deadline: loop semua task, cek
 ```c
@@ -171,3 +171,41 @@ kalau `true`, `print nama dan deadline-nya`
 
 4. fokus ke hari
 5. Return positif = beberapa hari lagi dealine, negatif = sudah lewat deadline
+
+### Algoritma Notifikasi
+#### Algoritma
+Fitur sederhana:
+1. Cek semua tugas dan hitung sisa hari ke deadline
+2. Tampilkan warning di terminal untuk tugas urgent (≤ 3 hari) dan sudah lewat harinya
+
+```c
+// notification.h
+void notifikasi_terminal(daftar_tugas* tasks, int count);
+```
+#### Hasil
+1. Hasil yang diinginkan `terminal`
+
+```
+=== NOTIFIKASI DEADLINE ===
+SUDAH LEWAT: Debug Kode - Deadline: 01/12/2024 (lewat 3 hari)
+2 hari lagi: Desain Poster - Deadline: 10/12/2024
+5 hari lagi: Belajar Python - Deadline: 15/12/2024
+```
+
+#### Catatan
+1. Download `waktu_utils.c` dan `waktu_utils.h` → kasih ke AI
+2. Loop semua task, panggil fungsi punya si **Jesika**
+```c
+hitung_sisa_hari(task->tanggal_deadline_unix)
+```
+3. cek
+```c
+if (sisa_hari < 0 && strcmp(task->status, "belum selesai") == 0)
+```
+kalau `true`, berarti sudah lewat
+4. cek
+```c
+else if (sisa_hari <= 3 && sisa_hari >= 0)
+```
+`printf("n hari lagi")`
+5. notifikasi untuk deadline yang <= 5 hari
