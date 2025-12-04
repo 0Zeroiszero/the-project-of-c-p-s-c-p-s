@@ -1,12 +1,22 @@
 # Dokumentasi Fungsi CRUD
-## Cara implementasi kode untuk membuat:
+## Arahan implementasi kode untuk membuat:
 [lihat format.txt](http://github.com/0Zeroiszero/the-project-of-c-p-s-c-p-s/blob/main/debug/format.txt "lihat format.txt")
+[lihat contoh.txt](http://github.com/0Zeroiszero/the-project-of-c-p-s-c-p-s/blob/main/debug/contoh.txt "lihat contoh.txt")
 1. Membuat algoritma pengurutan
 2. Membuat algoritma menyimpan file (saving)
 3. Membuat algoritma deadline
 4. Membuat algoritma notifikasi
 ------------
+### Isi contoh.txt
 
+    Belajar Python | Mengerjakan latihan fungsi dan modul | 15-12-2024 | belum selesai | 1734220800 | 01-12-2024
+    Desain Poster | Buat poster acara seminar teknologi | 10-12-2024 | selesai | 1733788800 | 25-11-2024
+    Riset Pasar | Analisis kompetitor produk digital | 20-12-2024 | belum selesai | 1734652800 | 30-11-2024
+    Presentasi Kelompok | Slide presentasi proyek akhir | 05-12-2024 | selesai | 1733356800 | 20-11-2024
+    Laporan Keuangan | Catatan pengeluaran bulan November | 08-12-2024 | belum selesai | 1733616000 | 02-12-2024
+
+## Isi format.txt (acuan contoh.tx)
+    nama | deskripsi | tanggal_deadline | status: selesai/belum selesai | tanggal_deadline_unix | last_added | last_modified,
 ### Daftar Folder dan File
 * `/src` - berisikan file dengan ekstensi '.c'
 * `/include` - Berisikan file dengan ekstensi '.h'
@@ -46,3 +56,11 @@ parameter filename adalah Nama file yang akan dicek. Return 1 jika file ada, 0 j
  */
 int cek_file_ada(const char* filename);
 ```
+
+### Algoritma Pengurutan
+```c
+// sorting.h
+void sortir_by_nama(daftar_tugas* tasks, int count);
+void sortir_by_deadline(daftar_tugas* tasks, int count);
+```
+Hasil yang diinginkan
