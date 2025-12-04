@@ -59,14 +59,14 @@ int cek_file_ada(const char* filename);
 
 ### Algoritma Pengurutan
 Dua algoritma pengurutan: 
-- nama 
-- deadline
+1. nama (A-Z)
+2. deadline (Deadline terdekat dari hari ini)
 ```c
 // sorting.h
 void sortir_by_name(daftar_tugas* tasks, int count);
 void sortir_by_deadline(daftar_tugas* tasks, int count);
 ```
-Hasil yang diinginkan
+1. Hasil yang diinginkan
 `Pengurutan berdasarkan nama (A-Z)`
 
 
