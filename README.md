@@ -165,7 +165,7 @@ Laporan Keuangan - Seharusnya: 08/12/2024
 2. hitung_sisa_hari: `return (deadline_unix - waktu_sekarang()) / 86400;`
 3. tampilkan_tugas_lewat_deadline: loop semua task, cek
 ```c
-if (task->tanggal_deadline_unix < waktu_sekarang() && strcmp(task->status, "belum_selesai") == 0)
+if (task->tanggal_deadline_unix < waktu_sekarang() && strcmp(task->status, "belum selesai") == 0)
 ```
 kalau `true`, `print nama dan deadline-nya`
 4. fokus ke hari
