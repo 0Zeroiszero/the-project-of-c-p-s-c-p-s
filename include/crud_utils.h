@@ -121,7 +121,7 @@ typedef enum {
 } status_tugas_t;
 
 #define MARK_SELESAI "selesai"
-#define MARK_BELUM_SELESAI "belum_selesai"
+#define MARK_BELUM_SELESAI "belum selesai"
 
 /**
  * Menandai tugas tertentu sebagai selesai
