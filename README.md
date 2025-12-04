@@ -29,9 +29,16 @@ typedef struct {
     last_modified; // unix, terakhir diubah
 
 - `files_utils.h`
-```C
+
+```c
 /*
 Fungsinya membaca file untuk file yang berisikan format (lihat folder debug) untuk struct daftar_tugas. Parameter filename hanya diperbolehkan file dengan ekstensi .txt
 */
 char* baca_file(const char* filename);
+
+/*
+Mengecek apakah file ada dan dapat dibuka untuk dibaca
+parameter filename adalah Nama file yang akan dicek. Return 1 jika file ada, 0 jika tidak ada atau tidak dapat diakses
+ */
+int cek_file_ada(const char* filename);
 ```
