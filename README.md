@@ -2,7 +2,7 @@
 ## Arahan implementasi kode untuk membuat:
 [lihat format.txt](http://github.com/0Zeroiszero/the-project-of-c-p-s-c-p-s/blob/main/debug/format.txt "lihat format.txt")
 [lihat contoh.txt](http://github.com/0Zeroiszero/the-project-of-c-p-s-c-p-s/blob/main/debug/contoh.txt "lihat contoh.txt")
-1. Membuat algoritma pengurutan
+1. Membuat [algoritma pengurutan](https://github.com/0Zeroiszero/the-project-of-c-p-s-c-p-s?tab=readme-ov-file#algoritma-pengurutan, "algoritma pengurutan")
 2. Membuat algoritma menyimpan file (saving)
 3. Membuat algoritma deadline
 4. Membuat algoritma notifikasi
