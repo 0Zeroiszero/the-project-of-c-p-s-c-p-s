@@ -8,15 +8,17 @@
 4. Membuat algoritma notifikasi
 ------------
 ### Isi contoh.txt
-
+```
     Belajar Python | Mengerjakan latihan fungsi dan modul | 15-12-2024 | belum selesai | 1734220800 | 01-12-2024
     Desain Poster | Buat poster acara seminar teknologi | 10-12-2024 | selesai | 1733788800 | 25-11-2024
     Riset Pasar | Analisis kompetitor produk digital | 20-12-2024 | belum selesai | 1734652800 | 30-11-2024
     Presentasi Kelompok | Slide presentasi proyek akhir | 05-12-2024 | selesai | 1733356800 | 20-11-2024
     Laporan Keuangan | Catatan pengeluaran bulan November | 08-12-2024 | belum selesai | 1733616000 | 02-12-2024
-
-## Isi format.txt (acuan contoh.txt)
+```
+### Isi format.txt (acuan contoh.txt)
+```
     nama | deskripsi | tanggal_deadline | status: selesai/belum selesai | tanggal_deadline_unix | last_added | last_modified,
+```
 ### Daftar Folder dan File
 * `/src` - berisikan file dengan ekstensi '.c'
 * `/include` - Berisikan file dengan ekstensi '.h'
