@@ -68,10 +68,10 @@ void sortir_by_deadline(daftar_tugas* tasks, int count);
 ```
 1. Hasil yang diinginkan
 `Pengurutan berdasarkan nama (A-Z)`
-
-
+```
     Belajar Python | Mengerjakan latihan fungsi dan modul | 15-12-2024 | status: belum selesai | 1734220800 | 01-12-2024 | ,
     Desain Poster | Buat poster acara seminar teknologi | 10-12-2024 | status: selesai | 1733788800 | 25-11-2024 | ,
     Laporan Keuangan | Catatan pengeluaran bulan November | 08-12-2024 | status: belum selesai | 1733616000 | 02-12-2024 | ,
     Presentasi Kelompok | Slide presentasi proyek akhir | 05-12-2024 | status: selesai | 1733356800 | 20-11-2024 | ,
     Riset Pasar | Analisis kompetitor produk digital | 20-12-2024 | status: belum selesai | 1734652800 | 30-11-2024 | ,
+```
