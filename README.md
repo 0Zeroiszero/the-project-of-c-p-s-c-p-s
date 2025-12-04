@@ -168,5 +168,7 @@ Laporan Keuangan - Seharusnya: 08/12/2024
 if (task->tanggal_deadline_unix < waktu_sekarang() && strcmp(task->status, "belum selesai") == 0)
 ```
 kalau `true`, `print nama dan deadline-nya`
+
 4. fokus ke hari
+
 5. Return positif = beberapa hari lagi dealine, negatif = sudah lewat deadline
