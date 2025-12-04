@@ -96,7 +96,7 @@ int validasi_teks_bebas_delimiter(const char* str);
  * Memori untuk array tugas akan dialokasikan secara dinamis.
  * 
  * @param filename TIDAK PERLU baca_file; Path ke file yang akan dibaca. File harus berisi data tugas
- *                 dengan format: "nama | deskripsi | tanggal | status | ts_deadline | ts_lastadded".
+ *                 dengan format: "nama | deskripsi | tanggal_deadline | status: selesai/belum selesai | tanggal_deadline_unix | last_added | last_modified,".
  * @param tasks    Pointer ke pointer yang akan menunjuk ke array `daftar_tugas`
  *                 yang dialokasikan secara dinamis. **Pemanggil bertanggung
  *                 jawab untuk membebaskan memori ini dengan `free(*tasks)`**.

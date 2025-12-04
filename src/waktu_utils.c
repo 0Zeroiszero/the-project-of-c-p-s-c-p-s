@@ -21,7 +21,7 @@ time_t konversi_tanggal(const char* ddmmyyyy)
         return -1;
     }
 
-    // Validasi range tahun (1900-2100 untuk to-do list realistis)
+    // Validasi range tahun (1900-2100)
     if (year < 1900 || year > 2100) {
         fprintf(stderr, "Error: Tahun harus antara 1900-2100\n");
         return -1;

@@ -153,7 +153,7 @@ hapus_tugas(daftar_tugas** tasks, int* count, int index)
     // Kurangi count
     (*count)--;
     
-    // Realloc untuk mengurangi ukuran array (opsional tapi direkomendasikan)
+    // Realloc untuk mengurangi ukuran array
     if (*count > 0) {
         daftar_tugas* temp = realloc(*tasks, (*count) * sizeof(daftar_tugas));
         if (!temp && *count > 0) {  // Gagal realloc tapi masih ada data
