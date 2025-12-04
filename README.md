@@ -1,6 +1,10 @@
 # Dokumentasi Fungsi CRUD
-## Daftar Isi
+## Cara implementasi kode untuk membuat:
 
+1. Membuat algoritma pengurutan
+2. Membuat algoritma menyimpan file (saving)
+3. Membuat algoritma deadline
+4. Membuat algoritma notifikasi
 ------------
 
 ### Daftar Folder dan File
