@@ -22,11 +22,11 @@ typedef struct {
     time_t last_modified;
 } daftar_tugas;
 ```
-    **tanggal_deadline**; format: dd/mm/yyyy, contoh 23/12/2025
-    **status**; //selesai atau belum selesai
-    **tanggal_deadline_unix**; // unix
-    **last_added**; // unix, terakhir ditambahkan
-    **last_modified**; // unix, terakhir diubah
+    tanggal_deadline; format: dd/mm/yyyy, contoh 23/12/2025
+    status; //selesai atau belum selesai
+    tanggal_deadline_unix; // unix
+    last_added; // unix, terakhir ditambahkan
+    last_modified; // unix, terakhir diubah
 
 - `files_utils.h`
 ```C
