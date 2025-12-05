@@ -96,7 +96,7 @@ void sortir_by_deadline(daftar_tugas* tasks, int count);
     Riset Pasar | Analisis kompetitor produk digital | 20-12-2024 | status: belum selesai | 1734652800 | 30-11-2024 | ,
 ```
 #### Catatan
-Download file `crud_utils.c` dan `crud_utils.h` kemudian berikan kepada AI.
+Download file `crud_utils.c` dan `crud_utils.h`
 
 deadline diurutkan dengan memanfaatkan `tanggal_deadline_unix` yang terdapat pada struct dan gunakan fungsi `time_t waktu_sekarang();` untuk melihat mana yang terdekat dari hari ini
 
@@ -129,7 +129,7 @@ Gagal menyimpan ke file! Periksa file
 > Jika ingin menambahkan hapus file dapat menggunakan fungsi `remove()`
 
 #### Catatan
-1. Download `files_utils.c` dan `files_utils.h` → berikan ke AI
+1. Download `files_utils.c` dan `files_utils.h`
 2. Fungsi paling penting: `fopen(filename, "w")` pada `stdio.h` untuk buat file baru
 3. Loop semua task, tulis pakai `fprintf(file, "%s|%s|%s|%s|%ld|%ld|%ld,\n", ...)`
 4. Jangan lupa `fclose(file)` di akhir
@@ -161,7 +161,7 @@ Laporan Keuangan - Seharusnya: 08/12/2024
 ```
 
 #### Catatan
-1. Download `waktu_utils.c` dan `waktu_utils.h` → kasih ke AI
+1. Download `waktu_utils.c` dan `waktu_utils.h`
 2. hitung_sisa_hari: `return (deadline_unix - waktu_sekarang()) / 86400;`
 3. tampilkan_tugas_lewat_deadline: loop semua task, cek
 ```c
@@ -193,7 +193,7 @@ SUDAH LEWAT: Debug Kode - Deadline: 01/12/2024 (lewat 3 hari)
 ```
 
 #### Catatan
-1. Download `waktu_utils.c` dan `waktu_utils.h` → kasih ke AI
+1. Download `waktu_utils.c` dan `waktu_utils.h`
 2. Loop semua task, panggil fungsi punya si **Jesika**
 ```c
 hitung_sisa_hari(task->tanggal_deadline_unix)
