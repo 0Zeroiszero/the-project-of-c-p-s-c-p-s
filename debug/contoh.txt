@@ -1,5 +1,10 @@
-Belajar Python | Mengerjakan latihan fungsi dan modul | 15-12-2024 | belum selesai | 1734220800 | 01-12-2024
-Desain Poster | Buat poster acara seminar teknologi | 10-12-2024 | selesai | 1733788800 | 25-11-2024
-Riset Pasar | Analisis kompetitor produk digital | 20-12-2024 | belum selesai | 1734652800 | 30-11-2024
-Presentasi Kelompok | Slide presentasi proyek akhir | 05-12-2024 | selesai | 1733356800 | 20-11-2024
-Laporan Keuangan | Catatan pengeluaran bulan November | 08-12-2024 | belum selesai | 1733616000 | 02-12-2024
+Chill with Nezuko | Nonton episode terbaru Demon Slayer bareng adik | 03/12/2025 | selesai | 1764720000 | 1765152000 | 1765152000,
+Draw Rem Chibi | Sketsa Rem dari Re:Zero pakai pen & ink | 05/12/2025 | belum selesai | 1764892800 | 1765152000 | 1765152000,
+Finish SAO GGO Arc | Baca LN Sword Art Online: Gun Gale Online vol.4 | 07/12/2025 | selesai | 1765065600 | 1765152000 | 1765152000,
+Build Gundam HGUC | Rakit HGUC Zeta Gundam edisi 40th anniversary | 06/12/2025 | belum selesai | 1764979200 | 1765152000 | 1765152000,
+Rewatch Clannad | Persiapan nangis bareng Tomoyo di After Story | 01/12/2025 | selesai | 1764547200 | 1765152000 | 1765152000,
+Join Comiket Prep | Siapin booth doujin buat Winter Comiket (15 Des) | 10/12/2025 | belum selesai | 1765324800 | 1765152000 | 1765152000,
+10K Steps with Holo | Jalan pagi sambil dengerin Spice & Wolf OST | 08/12/2025 | belum selesai | 1765152000 | 1765152000 | 1765152000,
+Code Like Lain | Debug aplikasi "Wired Terminal" versi lokal | 12/12/2025 | belum selesai | 1765497600 | 1765152000 | 1765152000,
+Cook Ramen Like Naruto | Bikin miso ramen ala Ichiraku dari nol | 15/12/2025 | belum selesai | 1765756800 | 1765152000 | 1765152000,
+Anime Marathon Weekend | Nonton 5 film Makoto Shinkai berturut-turut | 22/12/2025 | belum selesai | 1766361600 | 1765152000 | 1765152000,
