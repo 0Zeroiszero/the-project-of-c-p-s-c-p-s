@@ -1,5 +1,10 @@
 #include "delimiter_utils.h"
 
+/**
+ * 
+ * CUSTOM FUNGSI ASLI C
+ * 
+ */
 void 
 my_strcpy(char *dest, const char *src, size_t size) 
 {

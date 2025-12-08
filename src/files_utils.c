@@ -26,6 +26,21 @@ baca_file(const char* filename)
 }
 
 int 
+buat_file_baru(const char* filename) {
+    if (filename == NULL) {
+    return -1;
+    }
+
+    FILE* fp = fopen(filename, "w");
+    if (fp == NULL) {
+        return -1;
+    }
+
+    fclose(fp);
+    return 0;
+}
+
+int 
 cek_file_ada(const char* filename)
 {
     if (!filename) return 0;

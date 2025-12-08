@@ -1,16 +1,36 @@
 #include "waktu_utils.h"
 
-time_t waktu_sekarang()
+time_t 
+waktu_sekarang()
 {
     return time(NULL);
 }
 
-bool cek_kabisat(int tahun)
+struct tm 
+dapatkan_waktu_dengan_detail(const time_t* waktu_dalam_unix)
+{
+    return *localtime(waktu_dalam_unix);
+}
+
+double 
+hitung_selisih_waktu(time_t end, time_t start) {
+    return difftime(end, start);
+}
+
+int 
+hitung_sisa_hari(time_t deadline_unix) {
+    time_t now = waktu_sekarang();
+    return ((deadline_unix - now) / 86400) + 1;
+}
+
+bool 
+cek_kabisat(int tahun)
 {
     return (tahun % 4 == 0 && tahun % 100 != 0) || (tahun % 400 == 0);
 }
 
-time_t konversi_tanggal(const char* ddmmyyyy) 
+time_t 
+konversi_tanggal(const char* ddmmyyyy) 
 {
     if (!ddmmyyyy) return -1;
 

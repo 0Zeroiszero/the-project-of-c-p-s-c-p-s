@@ -2,6 +2,7 @@
 #include "delimiter_utils.h"
 #include "waktu_utils.h"
 #include "files_utils.h"
+#include "notification.h"
 
 static  
 int daftar_tugas_baru(daftar_tugas *tugas,
@@ -77,14 +78,13 @@ int
 edit_tugas(daftar_tugas* tasks, int count, int index,
            const char* nama, const char* deskripsi, const char* tanggal_deadline)
 {
-    // Validasi pointer dan index
+
     if (!tasks || index < 0 || index >= count) {
         return -1;
     }
     
-    daftar_tugas* tugas = &tasks[index]; // Pointer ke tugas yang akan diedit
+    daftar_tugas* tugas = &tasks[index]; 
     
-    // Edit nama jika diberikan
     if (nama != NULL) {
         if (my_strlen(nama) >= sizeof(tugas->nama)) {
             perror("Nama terlalu panjang");
@@ -93,7 +93,6 @@ edit_tugas(daftar_tugas* tasks, int count, int index,
         my_strcpy(tugas->nama, nama, sizeof(tugas->nama));
     }
     
-    // Edit deskripsi jika diberikan
     if (deskripsi != NULL) {
         if (my_strlen(deskripsi) >= sizeof(tugas->deskripsi)) {
             perror("Deskripsi terlalu panjang");
@@ -102,22 +101,19 @@ edit_tugas(daftar_tugas* tasks, int count, int index,
         my_strcpy(tugas->deskripsi, deskripsi, sizeof(tugas->deskripsi));
     }
     
-    // Edit deadline jika diberikan
     if (tanggal_deadline != NULL) {
-        // Validasi panjang string
+ 
         if (my_strlen(tanggal_deadline) >= sizeof(tugas->tanggal_deadline)) {
             perror("Tanggal deadline tidak valid");
             return -1;
         }
-        
-        // Konversi tanggal
+ 
         time_t converted_time = konversi_tanggal(tanggal_deadline);
         if (converted_time == -1) {
             perror("Format tanggal tidak valid, gunakan format DD/MM/YYYY");
-            return -1; // Format tanggal invalid
+            return -1;
         }
-        
-        // Update data
+
         my_strcpy(tugas->tanggal_deadline, tanggal_deadline, sizeof(tugas->tanggal_deadline));
         tugas->tanggal_deadline_unix = converted_time;
     }
@@ -130,7 +126,7 @@ edit_tugas(daftar_tugas* tasks, int count, int index,
 int 
 hapus_tugas(daftar_tugas** tasks, int* count, int index)
 {
-    // Validasi pointer dan index
+
     if (!tasks || !count) {
         return -1;
     }
@@ -145,33 +141,27 @@ hapus_tugas(daftar_tugas** tasks, int* count, int index)
         return -1;
     }
     
-    // Geser elemen setelah index ke kiri
     for (int i = index; i < *count - 1; i++) {
         (*tasks)[i] = (*tasks)[i + 1];
     }
     
-    // Kurangi count
     (*count)--;
     
-    // Realloc untuk mengurangi ukuran array
     if (*count > 0) {
         daftar_tugas* temp = realloc(*tasks, (*count) * sizeof(daftar_tugas));
-        if (!temp && *count > 0) {  // Gagal realloc tapi masih ada data
+        if (!temp && *count > 0) { 
             perror("Peringatan: Gagal mengoptimalkan memori setelah penghapusan");
-            // Tidak fatal, lanjutkan karena data masih valid
         } else if (temp) {
-            *tasks = temp;  // Hanya update jika realloc berhasil
+            *tasks = temp;
         }
     } else {
-        // Jika tidak ada tugas lagi, free dan set ke NULL
         free(*tasks);
         *tasks = NULL;
     }
     
     return 0;
 }
-
-static 
+ 
 int validasi_teks_bebas_delimiter(const char* str) {
     if (!str) return -1;
     
@@ -199,7 +189,6 @@ baca_tugas_dari_file(
         return -1;
     }
     
-    // Hitung jumlah tugas
     int task_count = 0;
     char* p = buffer;
     while (*p) {
@@ -208,14 +197,12 @@ baca_tugas_dari_file(
     }
     task_count++;
     
-    // Alokasi memori
     *tasks = (daftar_tugas*)malloc(task_count * sizeof(daftar_tugas));
     if (!*tasks) {
         free(buffer);
         return -1;
     }
     
-    // Parse tugas
     char* record = strtok(buffer, ",");
     int i = 0;
     while (record != NULL && i < task_count) {
@@ -261,7 +248,7 @@ baca_tugas_dari_file(
 
             time_t deadline_unix = konversi_tanggal(fields[2]);
             current_task->tanggal_deadline_unix = (deadline_unix != -1) ? deadline_unix : 0;
-            current_task->last_added = atol(fields[5]);   // field ke-5, bukan ke-4!
+            current_task->last_added = atol(fields[5]); 
             current_task->last_modified = atol(fields[6]);
             
             i++;
