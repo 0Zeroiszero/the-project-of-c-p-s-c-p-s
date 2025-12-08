@@ -12,7 +12,7 @@
         "-I${workspaceFolder}/include",
         "${workspaceFolder}/icon/myresource.o",
         "-o",
-        "${workspaceFolder}/debug/output.exe"
+        "${workspaceFolder}/debug/Aplikasi TO-DO List.exe"
       ],
       "group": "build",
       "options": {
