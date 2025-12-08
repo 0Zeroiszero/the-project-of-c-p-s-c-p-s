@@ -4,6 +4,14 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+/**
+ * 
+ * CUSTOM FUNGSI ASLI C
+ * 
+ */
 
 /**
  * Menyalin string dengan batasan ukuran (versi aman)

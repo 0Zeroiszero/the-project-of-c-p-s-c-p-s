@@ -82,12 +82,11 @@ int daftar_tugas_baru(daftar_tugas *tugas,
 /**
  * Validasi string untuk memastikan tidak mengandung delimiter , dan |
  * @return 0 jika aman, -1 jika berbahaya
- */
-static 
+ */ 
 int validasi_teks_bebas_delimiter(const char* str);
 
 /**
- * Membaca file, mem-parsing isinya yang memiliki 5 field, dan mengisinya ke dalam 
+ * Membaca file, mem-parsing isinya yang memiliki 7 field, dan mengisinya ke dalam 
  * array dinamis dari struktur `daftar_tugas`.
  * 
  * Fungsi ini membaca seluruh konten file ke dalam memori, kemudian mem-parsing data
@@ -176,4 +175,16 @@ tandai_tugas_belum_selesai(daftar_tugas* tasks, int count, int index);
  */
 void
 ubah_status_tugas(unsigned int input, daftar_tugas* tasks, int count, int index);
+
+/**
+ * 
+ * 
+ * 
+ * 
+ *  ISINYA UNTUK NOTIFIKASI DAN DEADLINE
+ * 
+ * 
+ * 
+ * 
+ */
 #endif
