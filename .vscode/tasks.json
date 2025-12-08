@@ -7,8 +7,10 @@
       "command": "gcc",
       "args": [
         "-g",
+        "${workspaceFolder}/*.c",
         "${workspaceFolder}/src/*.c",
         "-I${workspaceFolder}/include",
+        "${workspaceFolder}/icon/myresource.o",
         "-o",
         "${workspaceFolder}/debug/output.exe"
       ],
