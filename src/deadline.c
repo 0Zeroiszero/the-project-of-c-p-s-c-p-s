@@ -12,23 +12,3 @@ teks_sama(const char* a, const char* b) {
         i++;
     }
 }
-
-void tampilkan_tugas_lewat_deadline(daftar_tugas* tasks, int count) {
-    printf("=== LIST TUGAS LEWAT DEADLINE ===\n");
-
-    time_t now = waktu_sekarang();
-
-    for (int i = 0; i < count; i++) {
-        if (tasks[i].tanggal_deadline_unix < now &&
-            teks_sama(tasks[i].status, "belum selesai"))
-        {
-            time_t tgl = tasks[i].tanggal_deadline_unix;
-            struct tm t = dapatkan_waktu_dengan_detail(&tgl);
-
-            printf("%s - Seharusnya %s\n",
-                tasks[i].nama,
-                tasks[i].tanggal_deadline
-            );
-        }
-    }
-}
