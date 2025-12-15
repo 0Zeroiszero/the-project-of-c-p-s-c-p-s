@@ -2,8 +2,8 @@
 #define SORTING_H
 
 #include <time.h>
-#include <crud_utils.h>
-#include <waktu_utils.h>
+#include "crud_utils.h"
+#include "waktu_utils.h"
 
 /**
  * @brief Mengurutkan array daftar_tugas berdasarkan nama tugas secara alfabet

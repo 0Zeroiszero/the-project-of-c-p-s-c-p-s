@@ -5,7 +5,6 @@
 #include <stdbool.h>
 #include <stdio.h>
 
-#include <time.h>
 /**
 * @brief Mendapatkan waktu sekarang
 * @return sebuah time_t, waktu sekarang dalam format Unix timestamp
