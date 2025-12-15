@@ -2,7 +2,6 @@
 #define NOTIFICATION_H
 
 #include "crud_utils.h"
-#include "deadline.h"
 
 /**
  * @brief Menampilkan notifikasi deadline tugas ke terminal (layar)
