@@ -238,7 +238,13 @@ notifikasi_awal_screen(daftar_tugas daftar[], int count)
 void
 tampilkan_daftar_tugas(daftar_tugas* tasks, int count)
 {
+    if (count == 0)
+    {
+        printf("Tugas Kosong...");
+    }
+
     for (int i = 0; i < count; i++) {
+
         int sisa_hari = hitung_sisa_hari(tasks[i].tanggal_deadline_unix);
 
         printf("[%d]", i + 1);

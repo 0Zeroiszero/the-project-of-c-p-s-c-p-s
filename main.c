@@ -24,8 +24,8 @@ int main() {
         switch (menu_state) {
             case 0: // Menu Utama (selalu tampilkan opsi 0, 1, 2)
                 {
-                    int dummy = 0; // Selalu pass 0 agar tidak ada bug dari menu_utama
-                    menu_utama(&dummy);
+                    int state_awal = 0;
+                    menu_utama(&state_awal);
                     printf("NOTIFIKASI\n\n");
                     notifikasi_awal_screen(tasks, count);
                 }
