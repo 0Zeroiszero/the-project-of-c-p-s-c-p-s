@@ -1,10 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+
 #include "files_utils.h"
 
-char* 
+
+char*
 baca_file(const char* filename)
 {
-
     FILE* file = fopen(filename, "r");
+
     if (!file) return NULL;
 
     fseek(file, 0, SEEK_END);
@@ -12,6 +16,7 @@ baca_file(const char* filename)
     fseek(file, 0, SEEK_SET);
 
     char* buffer = (char*)malloc(size + 1);
+
     if (!buffer) {
         fclose(file);
         return NULL;
@@ -19,37 +24,38 @@ baca_file(const char* filename)
 
     fread(buffer, 1, size, file);
     buffer[size] = '\0';
-    fclose(file);
-    
-    return buffer;
 
+    fclose(file);
+
+    return buffer;
 }
 
-int 
+
+int
 buat_file_baru(const char* filename) {
-    if (filename == NULL) {
-    return -1;
-    }
+    if (filename == NULL) return -1;
 
     FILE* fp = fopen(filename, "w");
-    if (fp == NULL) {
-        return -1;
-    }
+
+    if (fp == NULL) return -1;
 
     fclose(fp);
+
     return 0;
 }
 
-int 
+
+int
 cek_file_ada(const char* filename)
 {
     if (!filename) return 0;
 
     FILE* file = fopen(filename, "r");
+
     if (file) {
         fclose(file);
         return 1;
     }
-    
+
     return 0;
 }

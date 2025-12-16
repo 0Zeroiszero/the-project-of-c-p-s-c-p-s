@@ -1,9 +1,6 @@
 #ifndef FILES_UTILS_H
 #define FILES_UTILS_H
 
-#include <stdio.h>
-#include <stdlib.h>
-
 /**
  * Membaca seluruh konten file teks
  * 
@@ -14,6 +11,7 @@
 char* 
 baca_file(const char* filename);
 
+
 /**
  * @brief Menyimpan daftar tugas ke file
  * 
@@ -23,6 +21,7 @@ baca_file(const char* filename);
 int 
 buat_file_baru(const char* filename);
 
+
 /**
  * Mengecek apakah file ada dan dapat dibuka untuk dibaca
  * @param filename Nama file yang akan dicek
@@ -30,5 +29,6 @@ buat_file_baru(const char* filename);
  */
 int 
 cek_file_ada(const char* filename);
+
 
 #endif

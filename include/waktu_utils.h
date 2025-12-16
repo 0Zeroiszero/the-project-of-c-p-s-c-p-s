@@ -1,9 +1,6 @@
 #ifndef WAKTU_UTILS_H
 #define WAKTU_UTILS_H
 
-#include <time.h>
-#include <stdbool.h>
-#include <stdio.h>
 
 /**
 * @brief Mendapatkan waktu sekarang
@@ -12,6 +9,7 @@
 time_t 
 waktu_sekarang();
 
+
 /**
  * @brief mendapatkan waktu secara lengkap termasuk detik, menit, jam, hari, bulan, dan tahun
  * @param waktu_dalam_unix pointer ke time_t yang merepresentasikan waktu dalam format Unix timestamp
@@ -19,6 +17,7 @@ waktu_sekarang();
  */
 struct tm 
 dapatkan_waktu_dengan_detail(const time_t* waktu_dalam_unix);
+
 
 /**
  * @brief Menghitung selisih waktu antara dua timestamp dalam satuan detik.
@@ -35,6 +34,7 @@ dapatkan_waktu_dengan_detail(const time_t* waktu_dalam_unix);
 double 
 hitung_selisih_waktu(time_t end, time_t start);
 
+
 /**
  * @brief selisih hari antara waktu saat ini dengan waktu deadline yang diberikan dalam format Unix timestamp (time_t).
  * @param deadline_unix time_t yang merepresentasikan waktu deadline
@@ -42,6 +42,7 @@ hitung_selisih_waktu(time_t end, time_t start);
  */
 int 
 hitung_sisa_hari(time_t deadline_unix);
+
 
 /**
  * Mengecek apakah tahun pada tanggal merupakan tahun kabisat
@@ -51,6 +52,7 @@ hitung_sisa_hari(time_t deadline_unix);
 bool 
 cek_kabisat(int tahun);
 
+
 /**
  * Mengubah string tanggal format "dd/mm/yyyy" menjadi Unix timestamp
  * @param date_str: string dengan format "dd/mm/yyyy" (misal: "04/12/2025")
@@ -58,5 +60,6 @@ cek_kabisat(int tahun);
  */
 time_t 
 konversi_tanggal(const char* date_str);
+
 
 #endif

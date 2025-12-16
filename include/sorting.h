@@ -1,9 +1,8 @@
 #ifndef SORTING_H
 #define SORTING_H
 
-#include <time.h>
 #include "crud_utils.h"
-#include "waktu_utils.h"
+
 
 /**
  * @brief Mengurutkan array daftar_tugas berdasarkan nama tugas secara alfabet
@@ -11,7 +10,9 @@
  * @param count jumlah elemen dalam array tasks
  * @return none
  */
-void sortir_by_name(daftar_tugas* tasks, int count);
+void 
+sortir_by_name(daftar_tugas* tasks, int count);
+
 
 /**
  * @brief Mengurutkan array daftar_tugas berdasarkan tanggal deadline (terdekat dari hari ini)
@@ -19,13 +20,16 @@ void sortir_by_name(daftar_tugas* tasks, int count);
  * @param count jumlah elemen dalam array tasks
  * @return none
  */
-void sortir_by_deadline(daftar_tugas* tasks, int count);
+void 
+sortir_by_deadline(daftar_tugas* tasks, int count);
+
 
 /**
  * Fungsi sorting gabungan: urut berdasarkan nama, lalu deadline
  */
 void 
 sortir_by_name_then_deadline(daftar_tugas* tasks, int count);
+
 
 /**
  * Fungsi untuk mengurutkan berdasarkan status (belum selesai dulu), lalu deadline

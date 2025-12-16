@@ -3,6 +3,7 @@
 
 #include "crud_utils.h"
 
+
 /**
  * @brief Menampilkan notifikasi deadline tugas ke terminal (layar)
  * @param daftar array daftar_tugas yang berisi tugas-tugas
@@ -11,5 +12,6 @@
  */
 void
 notification_terminal(daftar_tugas daftar[], int count);
+
 
 #endif
